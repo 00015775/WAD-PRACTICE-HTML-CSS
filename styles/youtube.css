@@ -1,9 +1,3 @@
-input{
-  margin:10px;
-}
-
-
-
 .youtube-preview{
   width:100%;
   display: inline-block;
@@ -22,7 +16,7 @@ input{
   vertical-align: top;
 }
 .channel-picture{
-  width:90%;
+  width:60%;
   border-radius:50%;
 }
 .info{
@@ -39,35 +33,232 @@ input{
 .title, .author, .video-stats{
   font-family:Arial;
   margin:0;
-}
-.title{
-  font-size:18px;
-  font-weight:bold;
+}.title{
+  font-size:14px;
+  font-weight:600;
 }
 .author{
   margin-top:10px;
   color:rgb(151, 151, 151);
-  font-size:16px;
+  font-size:12px;
 }
 .video-stats{
   margin-top:10px;
-  font-size:16px;
+  font-size:12px;
 }
 .main{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap:15px;
   row-gap:15px;
-  margin:10px;
+  margin-right:10px;
+}
+
+body{
+
+  padding-top:70px;
+  padding-left:90px;
+  padding-bottom:1500px;
+  background-color:rgb(251, 251, 251);
 }
 
 .header{
-  background-color:grey;
   margin:0;
   display: flex;
   flex-direction: row;
+  height:55px;
+  justify-content: space-between;
+  position:fixed;
+  top:0px;
+  left:0px;
+  right:0px;
+  background-color: white;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.08);
+  padding-bottom:5px;
+  border-bottom-width:1px;
+  border-bottom-color:rgb(232, 232, 232);
+  border-bottom-style:solid;
+  z-index: 1;
+
+}
+.left-part{
+  align-items: center;
+  display: flex;
+}
+
+
+.middle-part{
+  flex:1;
+  margin-left:30px;
+  margin-right:40px;
+  max-width:500px;
+  display: flex;
+  align-items: center;
+  border-radius:3px;
+  box-shadow: unset 1px 2px 5px rgba(0,0,0,0.05);
+
+}
+
+.search-bar{
+  flex:1;
+  height:34px;
+  padding:2px;
+  padding-left:6px;
+  outline:none;
+  border-width:1px;
+  border-style:solid;
+  border-color:lightgrey;
+  width:0;
+}
+.search-bar::placeholder{
+  font-family: Arial;
+  font-size:16px;
+
+}
+
+.search-button{
+  height:40px;
+  width:60px;
+  background-color: rgb(216, 216, 216);
+  border-width:1px;
+  border-style:solid;
+  margin-left:5px;
+  border-color:rgb(171, 171, 171);
+  margin-left:-11px;
+
+}
+.voice-button{
+  height:40px;
+  width:40px;
+  margin-left:8px;
+  border-radius:50%;
+  border:none;
+  background-color:lightgrey;
+}
+.voice-icon{
+  padding:2px;
+  height:24px;
+}
+.hamburger-menu{
+  height:25px;
+  margin-left:20px;
+  margin-right:20px;
+}
+.youtube-logo{
+  height:25px;
+}
+.search-icon{
+  height:25px;
+  margin-top:4px;
+}
+.upload-icon{
+  height:30px;
+}
+.notifications-icon{
+  height:30px;
+}
+.my-channel-icon{
+  height:35px;
+  border-radius: 50%;
+  margin-right:15px;
+}
+.youtube-app-icon{
+  height:30px;
+
+}
+.right-part{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  width:200px;
+  flex-shrink: 0;
+}
+.sidebar{
+  background-color:white;
+  position:fixed;
+  left:0;
+  bottom:0;
+  top:60px;
+  width: 80px;
+  border-right-width:1px;
+  border-right-style:solid;
+  border-right-color:rgb(232, 232, 232);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.08);
+  z-index: 1;
+}
+
+.thumbnail-info{
+  position:relative;
+}
+.video-time{
+  position:absolute;
+  right:5px;
+  bottom:8px;
+  background-color:black;
+  color:white;
+  font-family: Arial;
+  font-size:15px;
+  font-weight: 500;
+  padding:2px 4px 2px 4px;
+  border-radius: 2px;
+}
+.notifications-icon-container{
+  position:relative;
+}
+.notifications-count{
+  position:absolute;
+  top:3px;
+  right:-1px;
+  background-color:rgb(204, 0, 0);
+  color:white;
+  font-size:11px;
+  padding:0px 4px 0px 4px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-family: Arial;
+  border-style:solid;
+  border-width:1px;
+  border-color:white;
+}
+.side-bar-link{
+  transition:0.1s;
+  height:80px;
+  margin-bottom:1px;
+  cursor: pointer;
+}
+.side-bar-link:hover{
+  background-color:rgb(235, 235, 235);
+}
+
+.side-bar-link img{
+  height:35px;
+}
+.side-bar-link{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
-body{
-  margin:0;
+.side-bar-link div{
+  font-family: Arial;
+  font-size:10px;
+}
+
+
+.main{
+  margin-right:40px;
+  min-width: 700px;;
+}
+
+
+@media (max-width:900px){
+  .main{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width:1000px){
+  .main{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
