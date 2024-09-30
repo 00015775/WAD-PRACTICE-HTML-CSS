@@ -1,0 +1,47 @@
+
+.video-title{ 
+  font-weight:bolder;
+  font-size:18px;
+  width: 300px;
+  line-height: 30px;
+  margin-bottom:0;
+}
+
+.views{
+  font-size:15px;
+  font-weight:300;
+  color:rgb(131, 131, 131);
+  margin-top:0;
+}
+.stats{
+  font-size:16px;
+  color:rgb(131, 131, 131);
+  width:280px;
+  font-weight:250;
+  line-height:27px;
+  margin-top:10px;
+}
+p{
+  font-family:Arial;
+}
+
+.lorem{
+  background-color:red;
+  color:white;
+  font-size:20px;
+  padding:10px 20px 10px 20px;
+  width:800px;
+  text-align:center;
+  font-weight:400;
+  opacity:0.85;
+}
+.link{
+  transition:0.3s;
+  margin-left:10px;
+}
+.link:hover{
+  text-decoration: underline;
+}
+
+
+
